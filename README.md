@@ -5,4 +5,4 @@
 - PHP
 - CSS3
 - MySQL СУБД
-использование паттерна проектирования (MVC, Clear Architecture, DDD)
+- использование паттерна проектирования (MVC, Clear Architecture, DDD)
