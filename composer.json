@@ -1,10 +1,10 @@
 {
-    "name": "root/shop",
-    "description": "ARTShop",
+    "name": "root/insurance",
+    "description": "insuranceCompany",
     "authors": [
         {
-            "name": "Artem Ivachev",
-            "email": "artem-272002@mail.ru"
+            "name": "Maxim",
+            "email": "maxim.1911@yandex.ru"
         }
     ],
     "require": {},
