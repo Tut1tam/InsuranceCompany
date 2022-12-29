@@ -52,8 +52,7 @@ class CartController {
 
         // Return the user to the page from which he came
         $referrer = $_SERVER['HTTP_REFERER'];
-        header("Refresh:0");
-        header("Location: $referrer");
+        header("Location: /$referrer");
     }
 
     /**Action to add an item to the cart using an asynchronous request (ajax)
