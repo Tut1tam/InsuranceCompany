@@ -4,6 +4,7 @@ namespace App\controllers;
 use App\models\Category;
 use App\models\Product;
 use App\models\User;
+use App\models\Order;
 use App\components\Order;
 use App\components\Cart;
 
