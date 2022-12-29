@@ -169,7 +169,7 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `first_name`, `last_name`, `email`, `password`, `birth`, `company`, `address`, `city`, `state`, `postcode`, `country`, `additional_info`, `phone`, `date`, `status`, `role`) VALUES
-(1, 'admin', 'Rocket', 'admin@admin.web', '123456', '2002-08-27', 'RTU MIREA', 'street 23', 'Moscow', 'Moscow', 2858285, 'Russia', 'Additional information', '3777777777773', '2022-11-05 09:05:42', 1, 'admin'),
+(1, 'admin', 'admin', 'admin@email.com', '123456', '2002-08-27', 'test', 'street 23', 'Moscow', 'Moscow', 2858285, 'Russia', 'Additional information', '3777777777773', '2022-11-05 09:05:42', 1, 'admin'),
 (3, 'Test', 'Test', 'test@gmail.com', '123456', '2011-11-11', 'Test', 'test', 'Test', '[\"1\"]', 1341516, '[\"1\"]', 'test', '12345678912', '2022-11-06 14:49:46', 1, NULL);
 
 --

@@ -1,8 +1,4 @@
 <?php include ROOT . '/views/layouts/header.php'; ?>
-<?php
-use app\models\User;
-use app\models\Order;
-?>
 
 <div id="mainBody" style="height: 800px">
     <div class="container">

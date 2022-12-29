@@ -5,7 +5,7 @@ use App\components\Cart;
 ?>
 
 <!-- Main -->
-<div id="mainBody">
+<div id="mainBody" style="height:70vh;">
     <div class="container">
         <div class="row">
             <!-- Sidebar -->
