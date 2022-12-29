@@ -94,25 +94,12 @@ use App\models\Product;
                             <div class="control-group">
                                 <label class="control-label"><span style="color: white; font-weight: bold"><?php echo $product['price'];?> р.</span></label>
                                 <div class="controls">
-                                    <!-- <input type="number" class="span1" placeholder="Кол-во"/> -->
-                                    <a href="/cart/add/<?php echo $product['id']; ?>">
-                                        <button type="submit" class="btn btn-large btn-primary pull-right"> Добавить в корзину
-                                            <i class=" icon-shopping-cart"></i>
-                                        </button>
+                                    <a class="btn add-to-cart" onclick="location.reload();" data-id="<?php echo $product['id'];?>" href="#">Добавить
+                                        <i class="icon-shopping-cart"></i>
                                     </a>
                                 </div>
                             </div>
                         </form>
-
-                        <!-- <hr class="soft"/>
-                        <h4 style="color: white; font-weight: bold">100 шт. в наличии</h4>
-                        <form class="form-horizontal qtyFrm pull-right">
-                            <div class="control-group">
-                                 <div class="controls">
-                                    <p style="color: white; font-weight: bold; font-size: 20px">Цвет - зеленый</p>
-                                </div> -->
-                            <!-- </div>
-                        </form> -->
                         <hr class="soft clr"/>
                         <p style="color: white; font-weight: bold; font-size: 20px">
                             <?php echo $product['description'];?>
@@ -124,10 +111,6 @@ use App\models\Product;
                     </div>
 
                     <div class="span9">
-                        <!-- <ul id="productDetail" class="nav nav-tabs">
-                            <li class="active"><a href="#home" data-toggle="tab">Информация о продукте</a></li>
-                            <li><a href="#profile" data-toggle="tab" style="background-color: white">Сопутствующие товары</a></li>
-                        </ul> -->
                         <div id="myTabContent" class="tab-content">
                             <div class="tab-pane fade active in" id="home">
                                 <h4 style="color: white; font-weight: bold; font-size: 20px">Информация о товаре</h4>
@@ -140,279 +123,14 @@ use App\models\Product;
                                         <tr class="techSpecRow"><td class="techSpecTD1" style="color: white; font-weight: bold; font-size: 20px">Описание:</td><td class="techSpecTD2" style="color: white; font-weight: bold; font-size: 20px"> <?php echo $product['description'];?></td></tr>
                                     </tbody>
                                 </table>
-
-                            </div>
-                            <div class="tab-pane fade" id="profile">
-                                <div id="myTab" class="pull-right">
-                                    <a href="#listView" data-toggle="tab"><span class="btn btn-large"><i class="icon-list"></i></span></a>
-                                    <a href="#blockView" data-toggle="tab"><span class="btn btn-large btn-primary"><i class="icon-th-large"></i></span></a>
-                                </div>
-                                <br class="clr"/>
-                                <hr class="soft"/>
-                                <div class="tab-content">
-                                    <div class="tab-pane" id="listView">
-                                        <div class="row">	  
-                                            <div class="span2">
-                                                <img src="themes/images/products/4.jpg" alt=""/>
-                                            </div>
-                                            <div class="span4">
-                                                <h3>Новый | Доступный</h3>
-                                                <hr class="soft"/>
-                                                <h5>Наименование товара</h5>
-                                                <p>
-                                                    Nowadays the lingerie industry is one of the most successful business spheres.We always stay in touch with the latest fashion tendencies - 
-                                                    that is why our goods are so popular..
-                                                </p>
-                                                <a class="btn btn-small pull-right" href="product_details.html">Посмотреть детали</a>
-                                                <br class="clr"/>
-                                            </div>
-                                            <div class="span3 alignR">
-                                                <form class="form-horizontal qtyFrm">
-                                                    <h3>1000 руб.</h3>
-                                                    <label class="checkbox">
-                                                        <input type="checkbox">  Добавляет товар для сравнения
-                                                    </label><br/>
-                                                    <div class="btn-group">
-                                                        <a href="product_details.html" class="btn btn-large btn-primary"> Добавить <i class=" icon-shopping-cart"></i></a>
-                                                        <a href="product_details.html" class="btn btn-large"><i class="icon-zoom-in"></i></a>
-                                                    </div>
-                                                </form>
-                                            </div>
-                                        </div>
-                                        <hr class="soft"/>
-                                        <div class="row">	  
-                                            <div class="span2">
-                                                <img src="themes/images/products/5.jpg" alt=""/>
-                                            </div>
-                                            <div class="span4">
-                                                <h3>Новый | Доступный</h3>
-                                                <hr class="soft"/>
-                                                <h5>Наименование товара</h5>
-                                                <p>
-                                                    Nowadays the lingerie industry is one of the most successful business spheres.We always stay in touch with the latest fashion tendencies - 
-                                                    that is why our goods are so popular..
-                                                </p>
-                                                <a class="btn btn-small pull-right" href="product_details.html">Посмотреть детали</a>
-                                                <br class="clr"/>
-                                            </div>
-                                            <div class="span3 alignR">
-                                                <form class="form-horizontal qtyFrm">
-                                                    <h3>1000 руб.</h3>
-                                                    <label class="checkbox">
-                                                        <input type="checkbox">  Добавляет товар для сравнения
-                                                    </label><br/>
-                                                    <div class="btn-group">
-                                                        <a href="product_details.html" class="btn btn-large btn-primary"> Добавить <i class=" icon-shopping-cart"></i></a>
-                                                        <a href="product_details.html" class="btn btn-large"><i class="icon-zoom-in"></i></a>
-                                                    </div>
-                                                </form>
-                                            </div>
-                                        </div>
-                                        <hr class="soft"/>
-                                        <div class="row">	  
-                                            <div class="span2">
-                                                <img src="themes/images/products/6.jpg" alt=""/>
-                                            </div>
-                                            <div class="span4">
-                                                <h3>Новый | Доступный</h3>
-                                                <hr class="soft"/>
-                                                <h5>Наименование товара</h5>
-                                                <p>
-                                                    Nowadays the lingerie industry is one of the most successful business spheres.We always stay in touch with the latest fashion tendencies - 
-                                                    that is why our goods are so popular..
-                                                </p>
-                                                <a class="btn btn-small pull-right" href="product_details.html">Посмотреть детали</a>
-                                                <br class="clr"/>
-                                            </div>
-                                            <div class="span3 alignR">
-                                                <form class="form-horizontal qtyFrm">
-                                                    <h3>1000 руб.</h3>
-                                                    <label class="checkbox">
-                                                        <input type="checkbox">  Добавляет товар для сравнения
-                                                    </label><br/>
-                                                    <div class="btn-group">
-                                                        <a href="product_details.html" class="btn btn-large btn-primary"> Add to <i class=" icon-shopping-cart"></i></a>
-                                                        <a href="product_details.html" class="btn btn-large"><i class="icon-zoom-in"></i></a>
-                                                    </div>
-                                                </form>
-                                            </div>
-                                        </div>
-                                        <hr class="soft"/>
-                                        <div class="row">	  
-                                            <div class="span2">
-                                                <img src="themes/images/products/7.jpg" alt=""/>
-                                            </div>
-                                            <div class="span4">
-                                                <h3>Новый | Доступный</h3>
-                                                <hr class="soft"/>
-                                                <h5>Наименование товара</h5>
-                                                <p>
-                                                    Nowadays the lingerie industry is one of the most successful business spheres.We always stay in touch with the latest fashion tendencies - 
-                                                    that is why our goods are so popular..
-                                                </p>
-                                                <a class="btn btn-small pull-right" href="product_details.html">Посмотреть детали</a>
-                                                <br class="clr"/>
-                                            </div>
-                                            <div class="span3 alignR">
-                                                <form class="form-horizontal qtyFrm">
-                                                    <h3>1000 руб.</h3>
-                                                    <label class="checkbox">
-                                                        <input type="checkbox">Добавляет товар для сравнения
-                                                    </label><br/>
-                                                    <div class="btn-group">
-                                                        <a href="product_details.html" class="btn btn-large btn-primary"> Добавить <i class=" icon-shopping-cart"></i></a>
-                                                        <a href="product_details.html" class="btn btn-large"><i class="icon-zoom-in"></i></a>
-                                                    </div>
-                                                </form>
-                                            </div>
-                                        </div>
-
-                                        <hr class="soft"/>
-                                        <div class="row">	  
-                                            <div class="span2">
-                                                <img src="themes/images/products/8.jpg" alt=""/>
-                                            </div>
-                                            <div class="span4">
-                                                <h3>Новый | Доступный</h3>
-                                                <hr class="soft"/>
-                                                <h5>Наименование товара</h5>
-                                                <p>
-                                                    Nowadays the lingerie industry is one of the most successful business spheres.We always stay in touch with the latest fashion tendencies - 
-                                                    that is why our goods are so popular..
-                                                </p>
-                                                <a class="btn btn-small pull-right" href="product_details.html">Посмотреть детали</a>
-                                                <br class="clr"/>
-                                            </div>
-                                            <div class="span3 alignR">
-                                                <form class="form-horizontal qtyFrm">
-                                                    <h3>1000 руб.</h3>
-                                                    <label class="checkbox">
-                                                        <input type="checkbox">Добавляет товар для сравнения
-                                                    </label><br/>
-                                                    <div class="btn-group">
-                                                        <a href="product_details.html" class="btn btn-large btn-primary"> Добавить <i class=" icon-shopping-cart"></i></a>
-                                                        <a href="product_details.html" class="btn btn-large"><i class="icon-zoom-in"></i></a>
-                                                    </div>
-                                                </form>
-                                            </div>
-                                        </div>
-                                        <hr class="soft"/>
-                                        <div class="row">	  
-                                            <div class="span2">
-                                                <img src="themes/images/products/9.jpg" alt=""/>
-                                            </div>
-                                            <div class="span4">
-                                                <h3>Новый | Доступный</h3>
-                                                <hr class="soft"/>
-                                                <h5>Наименование товара</h5>
-                                                <p>
-                                                    Nowadays the lingerie industry is one of the most successful business spheres.We always stay in touch with the latest fashion tendencies - 
-                                                    that is why our goods are so popular..
-                                                </p>
-                                                <a class="btn btn-small pull-right" href="product_details.html">Посмотреть детали</a>
-                                                <br class="clr"/>
-                                            </div>
-                                            <div class="span3 alignR">
-                                                <form class="form-horizontal qtyFrm">
-                                                    <h3>1000 руб.</h3>
-                                                    <label class="checkbox">
-                                                        <input type="checkbox">Добавляет товар для сравнения
-                                                    </label><br/>
-                                                    <div class="btn-group">
-                                                        <a href="product_details.html" class="btn btn-large btn-primary"> Добавить <i class=" icon-shopping-cart"></i></a>
-                                                        <a href="product_details.html" class="btn btn-large"><i class="icon-zoom-in"></i></a>
-                                                    </div>
-                                                </form>
-                                            </div>
-                                        </div>
-                                        <hr class="soft"/>
-                                    </div>
-                                    <div class="tab-pane active" id="blockView">
-                                        <ul class="thumbnails">
-                                            <li class="span3">
-                                                <div class="thumbnail">
-                                                    <a href="product_details.html"><img src="themes/images/products/10.jpg" alt=""/></a>
-                                                    <div class="caption">
-                                                        <h5>Funko POP Ганнибал Лектор</h5>
-                                                        <p> 
-                                                            Lorem Ipsum is simply dummy text. 
-                                                        </p>
-                                                        <h4 style="text-align:center"><a class="btn" href="product_details.html"> <i class="icon-zoom-in"></i></a> <a class="btn" href="#">Добавить<i class="icon-shopping-cart"></i></a> <a class="btn btn-primary" href="#">1350 руб.</a></h4>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class="span3">
-                                                <div class="thumbnail">
-                                                    <a href="product_details.html"><img src="themes/images/products/11.jpg" alt=""/></a>
-                                                    <div class="caption">
-                                                        <h5>Comics Marvel Spider-man</h5>
-                                                        <p> 
-                                                            Lorem Ipsum is simply dummy text. 
-                                                        </p>
-                                                        <h4 style="text-align:center"><a class="btn" href="product_details.html"> <i class="icon-zoom-in"></i></a> <a class="btn" href="#">Добавить <i class="icon-shopping-cart"></i></a> <a class="btn btn-primary" href="#">670 руб.</a></h4>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class="span3">
-                                                <div class="thumbnail">
-                                                    <a href="product_details.html"><img src="themes/images/products/12.jpg" alt=""/></a>
-                                                    <div class="caption">
-                                                        <h5>LEGO Marvel SuperHeroes</h5>
-                                                        <p> 
-                                                            Lorem Ipsum is simply dummy text. 
-                                                        </p>
-                                                        <h4 style="text-align:center"><a class="btn" href="product_details.html"> <i class="icon-zoom-in"></i></a> <a class="btn" href="#">Добавить <i class="icon-shopping-cart"></i></a> <a class="btn btn-primary" href="#">10000 руб.</a></h4>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class="span3">
-                                                <div class="thumbnail">
-                                                    <a href="product_details.html"><img src="themes/images/products/13.jpg" alt=""/></a>
-                                                    <div class="caption">
-                                                        <h5>Hasbro figure</h5>
-                                                        <p> 
-                                                            Lorem Ipsum is simply dummy text. 
-                                                        </p>
-                                                        <h4 style="text-align:center"><a class="btn" href="product_details.html"> <i class="icon-zoom-in"></i></a> <a class="btn" href="#">Добавить <i class="icon-shopping-cart"></i></a> <a class="btn btn-primary" href="#">8100 руб.</a></h4>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class="span3">
-                                                <div class="thumbnail">
-                                                    <a href="product_details.html"><img src="themes/images/products/1.jpg" alt=""/></a>
-                                                    <div class="caption">
-                                                        <h5>Harry Potter figure</h5>
-                                                        <p> 
-                                                            Lorem Ipsum is simply dummy text. 
-                                                        </p>
-                                                        <h4 style="text-align:center"><a class="btn" href="product_details.html"> <i class="icon-zoom-in"></i></a> <a class="btn" href="#">Добавить <i class="icon-shopping-cart"></i></a> <a class="btn btn-primary" href="#">5100 руб.</a></h4>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class="span3">
-                                                <div class="thumbnail">
-                                                    <a href="product_details.html"><img src="themes/images/products/2.jpg" alt=""/></a>
-                                                    <div class="caption">
-                                                        <h5>Harry Potter original scenario with Daniel Radcliff's sign</h5>
-                                                        <p> 
-                                                            Lorem Ipsum is simply dummy text. 
-                                                        </p>
-                                                        <h4 style="text-align:center"><a class="btn" href="product_details.html"> <i class="icon-zoom-in"></i></a> <a class="btn" href="#">Add to <i class="icon-shopping-cart"></i></a> <a class="btn btn-primary" href="#">&euro;1000.00</a></h4>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                        <hr class="soft"/>
-                                    </div>
-                                </div>
-                                <br class="clr">
                             </div>
                         </div>
                     </div>
 
                 </div>
             </div>
-        </div> </div>
+        </div>
+    </div>
 </div>
 <!-- MainBody End -->
 

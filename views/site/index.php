@@ -39,12 +39,12 @@ use \App\models\Product;
                             <div class="caption">
                                 <h5><?php echo $sliderItem['name'];?></h5>
                                 <h4 style="text-align:center">
-                                    <!-- <a class="btn" href="/product/<?php echo $sliderItem['id'];?>">
-                                        <i class="icon-zoom-in"></i>
-                                    </a> -->
-                                    <a class="btn add-to-cart" data-id="<?php echo $sliderItem['id'];?>" href="#">Добавить
+                                    <a class="btn add-to-cart" onclick="location.reload();" data-id="<?php echo $sliderItem['id'];?>" href="#">Добавить
                                         <i class="icon-shopping-cart"></i>
                                     </a>
+                                    <!-- <a class="btn add-to-cart" data-id="<?php echo $sliderItem['id'];?>" href="#">Добавить
+                                        <i class="icon-shopping-cart"></i>
+                                    </a> -->
                                     <a class="btn btn-primary" href="#">
                                         <?php echo $sliderItem['price']; ?> р.
                                     </a>
@@ -75,10 +75,7 @@ use \App\models\Product;
                                     <div class="caption">
                                         <h5><?php echo $product['name'];?></h5>
                                         <h4 style="text-align:center">
-                                            <!-- <a class="btn" href="/product/<?php echo $product['id'];?>">
-                                                <i class="icon-zoom-in"></i>
-                                            </a> -->
-                                            <a class="btn add-to-cart" data-id="<?php echo $product['id'];?>" href="#">Добавить
+                                            <a class="btn add-to-cart" onclick="location.reload();" data-id="<?php echo $product['id'];?>" href="#">Добавить
                                                 <i class="icon-shopping-cart"></i>
                                             </a>
                                             <a class="btn btn-primary" href="#">

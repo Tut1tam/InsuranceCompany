@@ -64,7 +64,7 @@ use App\models\Order;
                                 <td><?php echo $product['id'];?></td>
                                 <td><?php echo $product['name'];?></td>
                                 <td><?php echo $product['code'];?></td>
-                                <td><?php echo $product['title'];?></td>
+                                <td><?php echo $product['name'];?></td>
                                 <td><?php echo $product['price'];?></td>
                                 <td><?php echo $quantity[$product['id']];?></td>
                             </tr>

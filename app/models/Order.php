@@ -173,5 +173,27 @@ class Order
                 break;
         }
     }
+
+    public static function getOrderByUserId($userId)
+    {
+        // DB connection
+        $db = Db::getConnection();
+        
+        // DB query
+        $sql = "SELECT * FROM product_order WHERE user_id = :userId";
+        
+        // Get and returns results (use prepare request)
+        $result = $db->prepare($sql);
+        $result->bindParam(":userId", $userId, PDO::PARAM_INT);
+        
+        // Indicate that we want to get data in the form of an array
+        $result->setFetchMode(PDO::FETCH_ASSOC);
+        
+        // Execute the request
+        $result->execute();
+        
+        // Return data
+        return $result->fetch();
+    }
 }
 
