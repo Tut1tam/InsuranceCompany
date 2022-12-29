@@ -5,7 +5,6 @@ use App\models\Category;
 use App\models\Product;
 use App\models\User;
 use App\models\Order;
-use App\components\Order;
 use App\components\Cart;
 
     /**CartController controller
@@ -53,6 +52,7 @@ class CartController {
 
         // Return the user to the page from which he came
         $referrer = $_SERVER['HTTP_REFERER'];
+        header("Refresh:0");
         header("Location: $referrer");
     }
 
